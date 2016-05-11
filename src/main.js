@@ -1,8 +1,16 @@
 import Vue from 'vue'
-import App from './App'
+import Lucklist from './Lucklist'
 
 /* eslint-disable no-new */
 new Vue({
   el: 'body',
-  components: { App }
+  components: { Lucklist },
+  method: {
+    handleIt: function () {
+      console.log('"handleId"')
+    }
+  },
+  ready: function () {
+    this.$dispatch('child-msg', 'dsd')
+  }
 })
