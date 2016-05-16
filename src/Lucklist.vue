@@ -12,15 +12,12 @@
   <helloworld></helloworld>
   <guodu></guodu>
 
-  <markdown></markdown>
-
   <todolist><todolist>
 </template>
 
 <script>
   import Helloworld from './components/Helloworld.vue'
   import Guodu from './components/Guodu.vue'
-  import markdown from './components/markdown.vue'
   import todolist from './components/todoList.vue'
 
   export default{
@@ -32,7 +29,6 @@
     components: {
       helloworld: Helloworld,
       Guodu: Guodu,
-      markdown: markdown,
       todolist: todolist
     },
     data () {

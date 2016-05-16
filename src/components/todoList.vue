@@ -36,6 +36,7 @@
 
 <script>
   var ls = window.localStorage
+  var request = require('request')
   export default{
     data () {
       return {
@@ -53,10 +54,28 @@
       },
       init: function () {
         this.list = JSON.parse(ls.getItem('todoList') || '[]')
+      },
+      test: function () {
+        var option = {
+          url: 'https://api.cn.ronghub.com/user/tag/set.json',
+          headers: {
+            'App-Key': 'uwd1c0sxdlx2',
+            nonce: 14314,
+            timestamp: new Date().getTime(),
+            signature: '890b422b75c1c5cb706e4f7921df1d94e69c17f4'
+          },
+          form: {
+            userId: '31232',
+            tags: ['bg', '男']
+          }
+        }
+        console.log('ds')
+        request.postAsync(option)
       }
     },
     ready: function () {
       this.init()
+      this.test()
     }
   }
 </script>
