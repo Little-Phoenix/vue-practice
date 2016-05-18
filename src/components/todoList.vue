@@ -51,6 +51,7 @@
         this.list = list
         ls.setItem('todoList', JSON.stringify(list))
         $event.target.value = ''
+        
       },
       init: function () {
         this.list = JSON.parse(ls.getItem('todoList') || '[]')
