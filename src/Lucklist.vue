@@ -10,15 +10,19 @@
     a = {{a}}, b={{b}}
   </div>
   <helloworld></helloworld>
+
   <guodu></guodu>
 
   <todolist><todolist>
+
+  <huiqi></huiqi>
 </template>
 
 <script>
   import Helloworld from './components/Helloworld.vue'
   import Guodu from './components/Guodu.vue'
   import todolist from './components/todoList.vue'
+  import huiqi from './components/huiqi.vue'
 
   export default{
     computed: {
@@ -29,7 +33,8 @@
     components: {
       helloworld: Helloworld,
       Guodu: Guodu,
-      todolist: todolist
+      todolist: todolist,
+      huiqi: huiqi
     },
     data () {
       return {
